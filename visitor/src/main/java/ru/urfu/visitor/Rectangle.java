@@ -10,24 +10,27 @@ package ru.urfu.visitor;
  */
 public class Rectangle extends Shape {
 
+    private int x;
+    private int y;
+
     @Override
     public void accept(ShapeVisitor shapeVisitor) {
         shapeVisitor.visit(this);
     }
 
-    @Override
-    public void draw(int x, int y) {
-        System.out.println("draw " + Rectangle.class.getSimpleName() + "on the " + x + " and " + y);
+    public int getX() {
+        return x;
     }
 
-    @Override
-    public String getArea() {
-        return this.getClass().getSimpleName() + " Area";
+    public int getY() {
+        return y;
     }
 
-    @Override
-    public String getNameShape() {
-        return this.getClass().getSimpleName();
+    public void setX(int x) {
+        this.x = x;
     }
 
+    public void setY(int y) {
+        this.y = y;
+    }
 }

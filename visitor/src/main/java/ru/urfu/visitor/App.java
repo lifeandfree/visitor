@@ -11,7 +11,13 @@ public class App {
 
     private static void showName(Shape[] shapes) {
         for (Shape shape : shapes) {
-            shape.accept(new ShapeVisitorImpl());
+            shape.accept(new AreaVisitor());
+        }
+        for (Shape shape : shapes) {
+            shape.accept(new DrawVisitor(2, 2));
+        }
+        for (Shape shape : shapes) {
+            shape.accept(new NameVisitor());
         }
     }
 }

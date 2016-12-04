@@ -10,25 +10,41 @@ package ru.urfu.visitor;
  */
 public class Pentagon extends Shape {
 
+    private int x;
+    private int y;
+
     @Override
     public void accept(ShapeVisitor shapeVisitor) {
         shapeVisitor.visit(this);
     }
 
-    @Override
-    public void draw(int x, int y) {
-        System.out.println("draw " + Pentagon.class.getSimpleName() + "on the " + x + " and " + y);
-
+    /**
+     * @return the x
+     */
+    public int getX() {
+        return x;
     }
 
-    @Override
-    public String getArea() {
-        return this.getClass().getSimpleName() + " Area";
+    /**
+     * @return the y
+     */
+    public int getY() {
+        return y;
     }
 
-    @Override
-    public String getNameShape() {
-        return this.getClass().getSimpleName();
+    /**
+     * @param x
+     *            the x to set
+     */
+    public void setX(int x) {
+        this.x = x;
     }
 
+    /**
+     * @param y
+     *            the y to set
+     */
+    public void setY(int y) {
+        this.y = y;
+    }
 }
