@@ -13,13 +13,6 @@ public class ShapeVisitorImpl implements ShapeVisitor {
     String area;
 
     @Override
-    public void visit(IShape shape) {
-        this.area = shape.getArea();
-        System.out.println(shape.getNameShape() + ": " + area);
-
-    }
-
-    @Override
     public void visit(Pentagon pentagon) {
         this.area = pentagon.getArea();
         System.out.println(pentagon.getNameShape() + ": " + area);

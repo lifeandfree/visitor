@@ -1,6 +1,6 @@
 package ru.urfu.visitor;
 
-public class Triangle implements IShape {
+public class Triangle extends Shape {
 
     @Override
     public void accept(ShapeVisitor shapeVisitor) {

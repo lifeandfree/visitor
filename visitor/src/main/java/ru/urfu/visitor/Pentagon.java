@@ -8,7 +8,7 @@ package ru.urfu.visitor;
 /**
  * @author lifeandfree
  */
-public class Pentagon implements IShape {
+public class Pentagon extends Shape {
 
     @Override
     public void accept(ShapeVisitor shapeVisitor) {

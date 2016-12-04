@@ -8,13 +8,13 @@ package ru.urfu.visitor;
 /**
  * @author lifeandfree
  */
-interface IShape {
+public abstract class Shape {
 
-    public void accept(ShapeVisitor shapeVisitor);
+    public abstract void accept(ShapeVisitor shapeVisitor);
 
-    void draw(int x, int y);
+    abstract void draw(int x, int y);
 
-    String getArea();
+    abstract String getArea();
 
-    String getNameShape();
+    abstract String getNameShape();
 }

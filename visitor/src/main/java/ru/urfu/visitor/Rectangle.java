@@ -8,7 +8,7 @@ package ru.urfu.visitor;
 /**
  * @author lifeandfree
  */
-public class Rectangle implements IShape {
+public class Rectangle extends Shape {
 
     @Override
     public void accept(ShapeVisitor shapeVisitor) {
